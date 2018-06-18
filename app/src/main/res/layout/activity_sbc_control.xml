@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="diploma.work.SBCControl">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/text_view_welcome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="0"
+            android:text="@string/welcome_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_layout_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linear_layout_welcome"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_order"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:text="@string/button_order_drink" />
+
+        <ImageButton
+            android:id="@+id/button_options"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_manage" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linear_layout_order"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/wave_loading_view"
+            android:layout_width="120dp"
+            android:layout_height="280dp"
+            app:wlv_borderColor="#000000"
+            app:wlv_borderWidth="10dp"
+            app:wlv_shapeType="rectangle"
+            app:wlv_round_rectangle="true"
+            app:wlv_triangle_direction="north"
+            app:wlv_progressValue="5"
+
+            app:wlv_titleCenterStrokeColor="#000000"
+            app:wlv_titleCenterStrokeWidth="3dp"
+            app:wlv_titleCenterColor="@color/cardview_light_background"
+            app:wlv_titleCenterSize="24sp"
+
+            app:wlv_titleTopStrokeColor="@color/cardview_light_background"
+            app:wlv_titleTopStrokeWidth="3dp"
+            app:wlv_titleTopColor="@color/cardview_light_background"
+            app:wlv_titleTopSize="24sp"
+
+            app:wlv_titleBottomStrokeColor="#000000"
+            app:wlv_titleBottomStrokeWidth="3dp"
+            app:wlv_titleBottomColor="#000000"
+            app:wlv_titleBottomSize="24sp"
+
+            app:wlv_waveAmplitude="2"
+            app:wlv_waveColor="#FFD069" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_progress_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linear_layout_image"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0%" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linear_layout_progress_text"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_gravity="bottom"
+            android:max="100" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/linear_layout_progress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/button_disconnect"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/disconnect" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

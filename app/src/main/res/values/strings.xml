@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Drinshu</string>
+    <string name="button_order_drink">Order drink</string>
+    <string name="welcome_label">Welcome to Drinshu app!</string>
+    <string name="disconnect">Disconnect</string>
+</resources>
